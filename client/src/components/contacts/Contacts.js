@@ -1,20 +1,46 @@
-import React,{useContext,Fragment} from 'react'
-import PropTypes from 'prop-types'
-import ContactItem from './ContactItem'
+import React,{useContext,Fragment,useEffect} from 'react'
+ import ContactItem from './ContactItem'
 import ContactContext from '../../Context/contact/contactContext'
+import { Spinner } from '../layouts/Spinner'
+import {
+    CSSTransition,
+    TransitionGroup,
+  } from 'react-transition-group';
 
 const Contacts = props => {
     const contactContext = useContext(ContactContext)
-    const {contacts}=contactContext
+    const { contacts, filtered,getContacts,loading } = contactContext
+    useEffect(() => {
+        getContacts()
+        // eslint-disable-next-line
+    },[]) 
+
+    if (contacts!==null && contacts.length === 0 && !loading) {
+        return <h4>Please add a contact</h4>
+    }
+     
+    
     return (
         <Fragment>
-            {contacts.map(contact => <ContactItem key={contact.id} contact={contact}/> )} 
+            {contacts!==null && !loading ? (  <TransitionGroup>  
+                {filtered !== null ? filtered.map(contact => (
+                    <CSSTransition key={contact._id} timeout={400} classNames="item" >
+                    <ContactItem  contact={contact} />
+                    </CSSTransition>
+                )) : (contacts.map(contact =>
+
+                    <CSSTransition key={contact._id} timeout={400} classNames="item" >
+                    <ContactItem  contact={contact} />
+                    </CSSTransition>
+                
+                    ))}
+            
+            </TransitionGroup>):(<Spinner/>)}
+           
         </Fragment>
     )
 }
 
-Contacts.propTypes = {
-
-}
+ 
 
 export default Contacts
