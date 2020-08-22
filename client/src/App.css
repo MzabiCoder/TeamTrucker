@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+  @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
 /* Global Styles */
 :root {
-  --primary-color: #003699;
-  --dark-color: #333333;
-  --light-color: #f4f4f4;
+  --primary-color: #1b1e25;
+  --dark-color: rgb(24, 24, 105);
+  --light-color: #cccdcf;
   --danger-color: #dc3545;
   --success-color: #28a745;
 }
@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arimo', sans-serif!important;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
@@ -95,6 +95,8 @@ img {
   padding: 1rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
+  border-radius: 6px;
+  
 }
 
 /* List */
@@ -194,6 +196,8 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  border-radius: 4px;
+  
 }
 
 .btn-link {
@@ -414,6 +418,8 @@ table th {
   opacity: 0;
   transition: opacity 500ms ease-in;
 }
+
+ 
 
 /* Mobile Styles */
 @media (max-width: 700px) {

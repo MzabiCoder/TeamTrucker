@@ -38,7 +38,7 @@ export const Navbar = ({title,icon}) => {
     return (
         <div className="navbar bg-primary">
             <h1>
-                <i className={icon}></i>{title}
+                {title}
             </h1>
             <ul>
                {isAuthenticated ? authLinks:guestLinks}
@@ -53,6 +53,6 @@ Navbar.propTypes = {
 }
 
 Navbar.defaultProps = {
-    title: 'Contact Keeper',
+    title: 'Contact Trucker',
     icon:'fas fa-id-card-alt'
 }

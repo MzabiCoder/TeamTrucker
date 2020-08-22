@@ -1,9 +1,12 @@
 import React, { useState, useContext,useEffect } from 'react'
 import ContactContext from '../../Context/contact/contactContext'
+import AlertContext from '../../Context/alert/AlertContext'
+
 
 const ContactForm = () => {
    
     const contactContext = useContext(ContactContext)
+    const  {setAlert}=useContext(AlertContext)
     const { addContact,current,clearCurrent,updateContact}=contactContext
     const [contact, setContat] = useState({
         name: '',
@@ -22,12 +25,20 @@ const ContactForm = () => {
 
     const submit = e => {
         e.preventDefault()
-        if (current !== null) {
-            updateContact(contact)
+   
+        if (name === '' || email === '' || phone === '') {
+            setAlert('Please enter all fields !!!','danger')
         } else {
-        addContact(contact)
-       }
-       clearAll()
+            if (current !== null) {
+               updateContact(contact) 
+               
+            } else {
+            addContact(contact)
+           }
+           clearAll()
+        }
+
+       
     
     }
 

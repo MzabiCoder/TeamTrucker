@@ -45,22 +45,22 @@ const Register = props => {
   }
     return (
         <div className="form-container">
-            <h1>Account <span className="text-primary"> Register </span></h1>
+            <h1>Sign Up </h1>
             <form onSubmit={onsubmit}>
                 <div className="form-group">
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name"> <strong> Name</strong></label>
                     <input type="text" name="name" value={name} onChange={onchange}/>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="name">Email</label>
+                    <label htmlFor="name"><strong> Email</strong></label>
                     <input type="email" name="email" value={email} onChange={onchange}/>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="name">Password</label>
+                    <label htmlFor="name"><strong>Password</strong></label>
                     <input type="password" name="password" minLength="6" value={password} onChange={onchange}/>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="name">Confirm Password</label>
+                    <label htmlFor="name"><strong> Confirm password</strong></label>
                     <input type="password" name="password2" minLength="6"s value={password2} onChange={onchange}/>
                 </div>
                 <input type="submit" value="Register" className="btn btn-primary btn-block"/>
