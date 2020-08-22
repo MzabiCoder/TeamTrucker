@@ -1,0 +1,4 @@
+{
+    "MongoURI":"mongodb://user1:nabil1982@ds249418.mlab.com:49418/mern_context",
+    "JWTsecret":"12345"
+}
