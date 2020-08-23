@@ -1,9 +1,8 @@
-  @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 /* Global Styles */
 :root {
-  --primary-color: #1b1e25;
-  --dark-color: rgb(24, 24, 105);
+  --primary-color: #3f4f68;
+  --dark-color: #3f4f68;
   --light-color: #cccdcf;
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -16,11 +15,12 @@
 }
 
 body {
-  font-family: 'Arimo', sans-serif!important;
+  font-family: 'Rubik', sans-serif!important;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
+  
 }
 
 a {
@@ -95,7 +95,7 @@ img {
   padding: 1rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
-  border-radius: 6px;
+
   
 }
 
@@ -196,7 +196,7 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
-  border-radius: 4px;
+  
   
 }
 

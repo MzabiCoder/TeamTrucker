@@ -16,7 +16,7 @@ export const Navbar = ({title,icon}) => {
   }
     const authLinks = (
         <Fragment>
-            <li>Hello {user && user.name}</li>
+            <li style={{marginRight:'1.5rem'}}>Welcome {' '} <span style={{ fontWeight: 'bold',fontWeight:'2rem'}}> {user && user.name.toUpperCase()}</span> </li>
             <li>
                 <a href="" onClick={onLogout} >
                 <i className="fas fa-sign-out-alt"></i> <span className="hise-sm">Logout</span>
@@ -53,6 +53,6 @@ Navbar.propTypes = {
 }
 
 Navbar.defaultProps = {
-    title: 'Contact Trucker',
+    title: 'Team Trucker',
     icon:'fas fa-id-card-alt'
 }

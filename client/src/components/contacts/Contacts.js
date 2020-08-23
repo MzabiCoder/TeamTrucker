@@ -16,7 +16,7 @@ const Contacts = props => {
     },[]) 
 
     if (contacts!==null && contacts.length === 0 && !loading) {
-        return <h4>Please add a contact</h4>
+        return <h3 style={{textAlign:'left'}}>Please add a contact...</h3>
     }
      
     

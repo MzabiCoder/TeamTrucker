@@ -53,16 +53,16 @@ const ContactForm = () => {
     }
     return (
         <form onSubmit={submit}>
-            <h2 className="text-primary">{current!==null ? 'Edit Contact' :'Add Contact'}</h2>
+            <h2 className="text-primary">{current!==null ? 'Edit Member' :'Add Member'}</h2>
             <input type="text" name="name" placeholder="Name" value={name} id="" onChange={change}/>  
-            <input type="text" name="email" placeholder="Email" value={email} id="" onChange={change}/>  
-            <input type="text" name="phone" value={phone} placeholder="phone" id="" onChange={change} />  
-            <h5>Contact Type</h5>
+            <input type="email" name="email" placeholder="Email" value={email} id="" onChange={change}/>  
+            <input type="text" name="phone" minLength="9" value={phone} placeholder="phone" id="" onChange={change} />  
+            <h6> <strong>Contact Type</strong> </h6>
             <input type="radio" name="type" value='personal' onChange={change} checked={type === 'personal'} /> {' '} Personal{' '}
             <input type="radio" name="type" value='professional' onChange={change} checked={type === 'professional'} />{' '}Professional
             <div>
             
-                <button   type="submit"  className="btn btn-primary btn-block" >{current!==null ? 'Edit Contact' :'Add Contact'} </button>
+                <button   type="submit"  className="btn btn-primary btn-block" >{current!==null ? 'Edit Member' :'Add Member'} </button>
             </div>   
             {current !== null && (
                    <div>

@@ -19,7 +19,7 @@ const Filter = () => {
      }
     return (
      <form>
-            <input type="text" ref={text} placeholder="Filter a contact..." onChange={filtering} />   
+            <input type="text" ref={text} placeholder="Filter a member..." onChange={filtering} />   
     </form>
     )
 }

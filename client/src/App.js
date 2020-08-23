@@ -12,6 +12,7 @@ import AlertState from './Context/alert/AlertState'
 import Alerts from './components/layouts/Alerts'
 import setAuthToken from './utils/SetTokenJS'
 import PrivateRoute from './components/routing/PrivateRoute'
+//import 'materialize-css/dist/css/materialize.min.css'
 
 if (localStorage.token) {
   setAuthToken(localStorage.token)
