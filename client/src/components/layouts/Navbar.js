@@ -16,9 +16,9 @@ export const Navbar = ({title,icon}) => {
   }
     const authLinks = (
         <Fragment>
-            <li style={{marginRight:'1.5rem'}}>Welcome {' '} <span style={{ fontWeight: 'bold',fontWeight:'2rem'}}> {user && user.name.toUpperCase()}</span> </li>
+            <li style={{marginRight:'1.5rem'}}>Welcome {' '} <span style={{ fontWeight: 'bold',fontSize:'2rem'}}> {user && user.name.toUpperCase()}</span> </li>
             <li>
-                <a href="" onClick={onLogout} >
+                <a href="!#" onClick={onLogout} >
                 <i className="fas fa-sign-out-alt"></i> <span className="hise-sm">Logout</span>
                 </a>
             </li>

@@ -1,4 +1,4 @@
 {
-    "MongoURI":"mongodb://user1:nabil1982@ds249418.mlab.com:49418/mern_context",
+    "MongoURI":"mongodb+srv://nabil1982:nabil1982@unik1982.clmu9.mongodb.net/<dbname>?retryWrites=true&w=majority",
     "JWTsecret":"12345"
 }
